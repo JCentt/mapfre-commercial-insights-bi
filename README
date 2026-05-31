@@ -1,0 +1,133 @@
+# 📊 MAPFRE Insurance: End-to-End Commercial Insights & Sales Pipeline Analytics
+
+<!-- FIRST VISUAL IMPACT: Your animated walkthrough GIF goes here -->
+![Commercial BI Portal Walkthrough](images/dashboard_walkthrough.gif)
+
+## 📌 Executive Summary & Business Context
+Historically, the commercial division at **MAPFRE Ecuador** relied on highly fragmented, manual Excel reporting structures to track premiums, pipeline stages, and broker performance. These traditional processes required massive manual hours to compile, resulting in delayed decision-making and a lack of granular visibility into the sales lifecycle for large corporate accounts.
+
+To overcome these operational challenges, I architected and deployed an end-to-end **Commercial Insights Business Intelligence Portal**. Built with a user-first philosophy, the platform was engineered to strip away analytical complexity, enabling the entire non-technical sales force and executive team to query real-time production figures, pipeline health, and tracking metrics **24/7**.
+
+### 🏆 Key Business Impact & Strategic Outcomes
+* **Record-Breaking Sales Performance:** During the fiscal year of its deployment, the commercial team achieved a historical record of **$84 Million in Gross Written Premiums (GWP)**.
+* **National Market Ascent:** Driven by data-backed tracking, the company advanced **5 positions upward in the national insurance market sales ranking**.
+* **Budget Attainment Optimization:** Continuous data visibility enabled close managerial oversight, leading the team to comfortably exceed **100% of the annual sales target**.
+* **400% Surge in Deal Closures:** The implementation of systematic sales stage tracking optimized the conversion rate, resulting in a **400% increase in new business closures**.
+
+---
+
+## 🛠️ Tech Stack & Analytical Architecture
+* **BI Platform:** Power BI Desktop / Power BI Service (Scheduled cloud updates for 24/7 availability).
+* **Data Modeling:** Star Schema (Dimension & Fact tables optimization) to enable lightning-fast filtering across years, lines of business, and agencies.
+* **Languages & ETL:** Advanced DAX (Data Analysis Expressions) for complex financial measures and time-intelligence calculations; Power Query for automated data cleansing.
+
+---
+
+## 🔍 Detailed Dashboard Breakdown (Selected Modules)
+
+### 1. Main Navigation Hub (Page 1)
+*Placeholder for Page 1 Screenshot: `![Navigation Hub](images/image_1.png)`*
+
+* **Business Value:** Designed as a centralized portal to prevent dashboard fatigue among sales teams. It grants immediate, single-click routing to distinct business layers: *Agencies, Lines of Business, Brokers, Sales Forecasting, Pipeline, and Activity Tracking*.
+
+---
+
+### 2. Agency Performance & Financial Matrix (Page 2)
+*Placeholder for Page 2 Screenshot: `![Agency Performance Analytics](images/image_2.png)`*
+
+* **Core Business Questions Answered:**
+  * Which individual agencies are leading premium volume, and what is their growth compared to the prior period?
+  * What is our current budget attainment rate across different regions?
+  * How are policies, current premiums, and retained premiums trending month-over-month?
+* **Strategic Value:** Features a complex multi-metric matrix comparing *Current Period Premium* against *Prior Period Premium* to compute exact percentage growth and *Budget Attainment*. It includes dynamic line-and-bar visual combinations to monitor performance variance throughout the calendar year.
+
+---
+
+### 3. Sales Funnel & Pipeline Stage Tracking (Page 4)
+*Placeholder for Page 4 Screenshot: `![Sales Pipeline Analytics](images/image_4.png)`*
+
+* **Core Business Questions Answered:**
+  * What is the financial volume distribution of our pipeline across key sales stages (*Commitment, Qualification, Submitted, Won*)?
+  * Which major B2B corporate prospects (e.g., major credit unions/cooperativas) represent our largest quoted values?
+  * What is the aggregate conversion rate (*Win Rate*) per agency?
+* **Strategic Value:** **This module was the catalyst for our 400% growth in deal closures.** Prior to its implementation, the organization lacked granular visibility over the sales pipeline for major corporate accounts. 
+* **Team Meeting Integration:** This specific page became the cornerstone of our weekly commercial team reviews. It allowed senior leadership to instantly detect structural bottlenecks, identify stagnant accounts in the "Submitted" or "Qualification" phases, and provide strategic executive support to account managers before negotiations stalled.
+
+---
+
+### 4. Broker Performance & Growth Analytics (Page 6)
+*Placeholder for Page 6 Screenshot: `![Broker Growth and Decline Analytics](images/image_3.png)`*
+
+* **Core Business Questions Answered:**
+  * Which brokers or agencies represent our highest volume concentration (*% Share*)?
+  * Who are our top-performing growth partners (*Top Growers*) versus accounts requiring urgent commercial intervention (*Top Decliners*)?
+  * What is the average premium yield generated per active insurance agent?
+* **Strategic Value:** Provides automated ranking mechanisms that separate organic account acquisition from macro-market trends. It empowered the commercial team to dynamically shift distribution strategies based on real-time broker concentration metrics.
+
+---
+
+## 💼 My Dual Role: Analytics Architecture + Commercial Oversight
+A critical factor in the success of this project was that my responsibilities extended far beyond data engineering. I did not simply build the dashboard; **I actively led the commercial and analytical follow-up strategy.** 
+
+By bridging the gap between raw data insights and field sales operations, I utilized this platform to drive accountability, monitor daily activity metrics, clear operational bottlenecks, and maintain cross-departmental alignment. This hands-on, data-driven management approach was the operational engine that turned these visual insights into record-breaking market growth.
+
+---
+*Note: All underlying financial datasets have been securely anonymized/masked to preserve corporate data confidentiality.*
+
+
+## 🧠 Featured DAX Formulations & Data Modeling
+To handle large insurance volumes and support dynamic time-intelligence analysis without performance degradation, I developed highly optimized DAX measures. Below are 4 core advanced formulations implemented in this project:
+
+
+### 1. Cumulative Budget Premium (BP YTD)
+*Computes the year-to-date cumulative budget premium volume, dynamically shifting based on the selected calendar periods.*
+```dax
+Budget_Premium_YTD = 
+VAR DATEEND= DATE(YEAR([START]),12,31)
+VAR DATESTART= DATE(YEAR([START]),1,1)
+RETURN
+
+CALCULATE(
+[BUDGET_PREMIUM],
+ALL(Calendar[Date]),
+Calendario[Calendar]>=DATESTART,
+Calendario[Calendar]<=DATEEND
+)
+
+```
+
+### 2. Distinct Policy Counter
+*Computes the number of policies which Premium es above 0, tu exclude canceled Policies.*
+```dax
+COUNT_POLICIES = CALCULATE(DISTINCTCOUNT(Produccion[POLIZA]),Produccion[PRIMA_PERIODO]>0)
+```
+
+### 3. Prior Period Premium
+*Computes last period premium for comparision.*
+```dax
+Prior_Period_Premium = CALCULATE(SUM(Production[PERIOD_PREMIUM]),dateadd(Calendar[Date],-1,YEAR))
+```
+
+### 4. Agent Ranking
+*Creates a ranking for agents based on their Premium. It helps creating simple tables that shows only the most important information,*
+```dax
+Rank Agente = 
+IF (
+    ISINSCOPE( Production[NAME_AGT_1] ),
+    RANKX (
+        CALCULATETABLE (
+            VALUES ( Production[NAME_AGT_1] ),
+            ALLSELECTED ( Production[NAME_AGT_1])
+        ),
+        [PERIOD_PREMIUM]
+    )
+)
+```
+
+### 5. PREMIUM SEGMENTS
+*Creates a variable that enables to create filter that segments the shown information. It can be used to create client profiles with several conditions.*
+```dax
+PREMIUM_OVER_10K = 
+CALCULATE(SUM('Production'[Prima Periodo]),
+'Production'[PERIOD_PREMIUM]>10000)
+```
