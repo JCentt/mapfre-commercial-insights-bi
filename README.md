@@ -25,15 +25,15 @@ To overcome these operational challenges, I architected and deployed an end-to-e
 
 ##  Detailed Dashboard Breakdown (Selected Modules)
 
-### 1. Main Navigation Hub (Page 1)
+### 1. Main Navigation Hub
 ![Navigation Hub](images/image_1.png)`
 
 * **Business Value:** Designed as a centralized portal to prevent dashboard fatigue among sales teams. It grants immediate, single-click routing to distinct business layers: *Agencies, Lines of Business, Brokers, Sales Forecasting, Pipeline, and Activity Tracking*.
 
 ---
 
-### 2. Agency Performance & Financial Matrix (Page 2)
-*Placeholder for Page 2 Screenshot: `![Agency Performance Analytics](images/image_2.png)`*
+### 2. Agency Performance & Financial Matrix
+![Agency Performance Analytics](images/image_2.png)`
 
 * **Core Business Questions Answered:**
   * Which individual agencies are leading premium volume, and what is their growth compared to the prior period?
@@ -43,8 +43,8 @@ To overcome these operational challenges, I architected and deployed an end-to-e
 
 ---
 
-### 3. Sales Funnel & Pipeline Stage Tracking (Page 4)
-*Placeholder for Page 4 Screenshot: `![Sales Pipeline Analytics](images/image_4.png)`*
+### 3. Sales Funnel & Pipeline Stage Tracking 
+![Sales Pipeline Analytics](images/image_4.png)`
 
 * **Core Business Questions Answered:**
   * What is the financial volume distribution of our pipeline across key sales stages (*Commitment, Qualification, Submitted, Won*)?
@@ -55,8 +55,8 @@ To overcome these operational challenges, I architected and deployed an end-to-e
 
 ---
 
-### 4. Broker Performance & Growth Analytics (Page 6)
-*Placeholder for Page 6 Screenshot: `![Broker Growth and Decline Analytics](images/image_3.png)`*
+### 4. Broker Performance & Growth Analytics
+![Broker Growth and Decline Analytics](images/image_3.png)`
 
 * **Core Business Questions Answered:**
   * Which brokers or agencies represent our highest volume concentration (*% Share*)?
