@@ -1,14 +1,14 @@
-# 📊 MAPFRE Insurance: End-to-End Commercial Insights & Sales Pipeline Analytics
+#  MAPFRE Insurance: End-to-End Commercial Insights & Sales Pipeline Analytics
 
 <!-- FIRST VISUAL IMPACT: Your animated walkthrough GIF goes here -->
 ![Commercial BI Portal Walkthrough](images/dashboard_walkthrough.gif)
 
-## 📌 Executive Summary & Business Context
+##  Executive Summary & Business Context
 Historically, the commercial division at **MAPFRE Ecuador** relied on highly fragmented, manual Excel reporting structures to track premiums, pipeline stages, and broker performance. These traditional processes required massive manual hours to compile, resulting in delayed decision-making and a lack of granular visibility into the sales lifecycle for large corporate accounts.
 
 To overcome these operational challenges, I architected and deployed an end-to-end **Commercial Insights Business Intelligence Portal**. Built with a user-first philosophy, the platform was engineered to strip away analytical complexity, enabling the entire non-technical sales force and executive team to query real-time production figures, pipeline health, and tracking metrics **24/7**.
 
-### 🏆 Key Business Impact & Strategic Outcomes
+###  Key Business Impact & Strategic Outcomes
 * **Record-Breaking Sales Performance:** During the fiscal year of its deployment, the commercial team achieved a historical record of **$84 Million in Gross Written Premiums (GWP)**.
 * **National Market Ascent:** Driven by data-backed tracking, the company advanced **5 positions upward in the national insurance market sales ranking**.
 * **Budget Attainment Optimization:** Continuous data visibility enabled close managerial oversight, leading the team to comfortably exceed **100% of the annual sales target**.
@@ -16,14 +16,14 @@ To overcome these operational challenges, I architected and deployed an end-to-e
 
 ---
 
-## 🛠️ Tech Stack & Analytical Architecture
+##  Tech Stack & Analytical Architecture
 * **BI Platform:** Power BI Desktop / Power BI Service (Scheduled cloud updates for 24/7 availability).
 * **Data Modeling:** Star Schema (Dimension & Fact tables optimization) to enable lightning-fast filtering across years, lines of business, and agencies.
 * **Languages & ETL:** Advanced DAX (Data Analysis Expressions) for complex financial measures and time-intelligence calculations; Power Query for automated data cleansing.
 
 ---
 
-## 🔍 Detailed Dashboard Breakdown (Selected Modules)
+##  Detailed Dashboard Breakdown (Selected Modules)
 
 ### 1. Main Navigation Hub (Page 1)
 *Placeholder for Page 1 Screenshot: `![Navigation Hub](images/image_1.png)`*
@@ -75,7 +75,7 @@ By bridging the gap between raw data insights and field sales operations, I util
 *Note: All underlying financial datasets have been securely anonymized/masked to preserve corporate data confidentiality.*
 
 
-## 🧠 Featured DAX Formulations & Data Modeling
+##  Featured DAX Formulations & Data Modeling
 To handle large insurance volumes and support dynamic time-intelligence analysis without performance degradation, I developed highly optimized DAX measures. Below are 4 core advanced formulations implemented in this project:
 
 
