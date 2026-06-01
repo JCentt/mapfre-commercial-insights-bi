@@ -26,7 +26,7 @@ To overcome these operational challenges, I architected and deployed an end-to-e
 ##  Detailed Dashboard Breakdown (Selected Modules)
 
 ### 1. Main Navigation Hub (Page 1)
-*Placeholder for Page 1 Screenshot: `![Navigation Hub](images/image_1.png)`*
+![Navigation Hub](images/image_1.png)`
 
 * **Business Value:** Designed as a centralized portal to prevent dashboard fatigue among sales teams. It grants immediate, single-click routing to distinct business layers: *Agencies, Lines of Business, Brokers, Sales Forecasting, Pipeline, and Activity Tracking*.
 
