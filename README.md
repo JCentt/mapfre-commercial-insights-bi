@@ -1,37 +1,37 @@
-#  MAPFRE Insurance: End-to-End Commercial Insights & Sales Pipeline Analytics
-![Commercial BI Portal Walkthrough](images/dashboard_walkthrough.gif)
+# 📊 MAPFRE Insurance: End-to-End Commercial Insights & Sales Pipeline Analytics
 
-##  Executive Summary & Business Context
+
+## 📌 Executive Summary & Business Context
 Historically, the commercial division at **MAPFRE Ecuador** relied on highly fragmented, manual Excel reporting structures to track premiums, pipeline stages, and broker performance. These traditional processes required massive manual hours to compile, resulting in delayed decision-making and a lack of granular visibility into the sales lifecycle for large corporate accounts.
 
 To overcome these operational challenges, I architected and deployed an end-to-end **Commercial Insights Business Intelligence Portal**. Built with a user-first philosophy, the platform was engineered to strip away analytical complexity, enabling the entire non-technical sales force and executive team to query real-time production figures, pipeline health, and tracking metrics **24/7**.
 
-###  Key Business Impact & Strategic Outcomes
+### 🏆 Key Business Impact & Strategic Outcomes
 * **Record-Breaking Sales Performance:** During the fiscal year of its deployment, the commercial team achieved a historical record of **$84 Million in Gross Written Premiums (GWP)**.
 * **National Market Ascent:** Driven by data-backed tracking, the company advanced **5 positions upward in the national insurance market sales ranking**.
 * **Budget Attainment Optimization:** Continuous data visibility enabled close managerial oversight, leading the team to comfortably exceed **100% of the annual sales target**.
 * **400% Surge in Deal Closures:** The implementation of systematic sales stage tracking optimized the conversion rate, resulting in a **400% increase in new business closures**.
 
+---
 
-
-##  Tech Stack & Analytical Architecture
+## 🛠️ Tech Stack & Analytical Architecture
 * **BI Platform:** Power BI Desktop / Power BI Service (Scheduled cloud updates for 24/7 availability).
 * **Data Modeling:** Star Schema (Dimension & Fact tables optimization) to enable lightning-fast filtering across years, lines of business, and agencies.
 * **Languages & ETL:** Advanced DAX (Data Analysis Expressions) for complex financial measures and time-intelligence calculations; Power Query for automated data cleansing.
 
+---
 
+## 🔍 Detailed Dashboard Breakdown (Selected Modules)
 
-##  Detailed Dashboard Breakdown
-
-### 1. Main Navigation Hub
+### 1. Main Navigation Hub (Page 1)
 ![Navigation Hub](images/image_1.png)`
 
 * **Business Value:** Designed as a centralized portal to prevent dashboard fatigue among sales teams. It grants immediate, single-click routing to distinct business layers: *Agencies, Lines of Business, Brokers, Sales Forecasting, Pipeline, and Activity Tracking*.
 
+---
 
-
-### 2. Agency Performance & Financial Matrix
-![Agency Performance Analytics](images/image_2.png)`
+### 2. Agency Performance & Financial Matrix (Page 2)
+![Agency Performance Analytics](images/image_2.png)
 
 * **Core Business Questions Answered:**
   * Which individual agencies are leading premium volume, and what is their growth compared to the prior period?
@@ -39,9 +39,9 @@ To overcome these operational challenges, I architected and deployed an end-to-e
   * How are policies, current premiums, and retained premiums trending month-over-month?
 * **Strategic Value:** Features a complex multi-metric matrix comparing *Current Period Premium* against *Prior Period Premium* to compute exact percentage growth and *Budget Attainment*. It includes dynamic line-and-bar visual combinations to monitor performance variance throughout the calendar year.
 
+---
 
-
-### 3. Sales Funnel & Pipeline Stage Tracking 
+### 3. Sales Funnel & Pipeline Stage Tracking (Page 4)
 ![Sales Pipeline Analytics](images/image_4.png)`
 
 * **Core Business Questions Answered:**
@@ -51,10 +51,10 @@ To overcome these operational challenges, I architected and deployed an end-to-e
 * **Strategic Value:** **This module was the catalyst for our 400% growth in deal closures.** Prior to its implementation, the organization lacked granular visibility over the sales pipeline for major corporate accounts. 
 * **Team Meeting Integration:** This specific page became the cornerstone of our weekly commercial team reviews. It allowed senior leadership to instantly detect structural bottlenecks, identify stagnant accounts in the "Submitted" or "Qualification" phases, and provide strategic executive support to account managers before negotiations stalled.
 
+---
 
-
-### 4. Broker Performance & Growth Analytics
-![Broker Growth and Decline Analytics](images/image_3.png)`
+### 4. Broker Performance & Growth Analytics (Page 6)
+![Broker Growth and Decline Analytics](images/image_3.png)
 
 * **Core Business Questions Answered:**
   * Which brokers or agencies represent our highest volume concentration (*% Share*)?
@@ -62,18 +62,18 @@ To overcome these operational challenges, I architected and deployed an end-to-e
   * What is the average premium yield generated per active insurance agent?
 * **Strategic Value:** Provides automated ranking mechanisms that separate organic account acquisition from macro-market trends. It empowered the commercial team to dynamically shift distribution strategies based on real-time broker concentration metrics.
 
+---
 
-
-##  My Dual Role: Analytics Architecture + Commercial Oversight
+## 💼 My Dual Role: Analytics Architecture + Commercial Oversight
 A critical factor in the success of this project was that my responsibilities extended far beyond data engineering. I did not simply build the dashboard; **I actively led the commercial and analytical follow-up strategy.** 
 
 By bridging the gap between raw data insights and field sales operations, I utilized this platform to drive accountability, monitor daily activity metrics, clear operational bottlenecks, and maintain cross-departmental alignment. This hands-on, data-driven management approach was the operational engine that turned these visual insights into record-breaking market growth.
 
-
+---
 *Note: All underlying financial datasets have been securely anonymized/masked to preserve corporate data confidentiality.*
 
 
-##  Featured DAX Formulations & Data Modeling
+## 🧠 Featured DAX Formulations & Data Modeling
 To handle large insurance volumes and support dynamic time-intelligence analysis without performance degradation, I developed highly optimized DAX measures. Below are 4 core advanced formulations implemented in this project:
 
 
